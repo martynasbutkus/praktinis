@@ -32,20 +32,22 @@ main{
             background-color: #55344c52;
         }
     }
-    .text{
+    .text {
         width: 50%;
         margin: auto;
         color: $dark;
-        h1{
+        h1 {
             font-size: 34px;
-            padding-bottom: 40px;
+            @media screen and (max-width: 768px) {
+                padding-bottom: 0; 
+            }
         }
-        p{
+        p {
             width: 70%;
             font-size: 20px;
             padding-bottom: 50px;
         }
-        button{
+        button {
             border: none;
             padding: 5px;
             font-size: 1.5vw;
@@ -53,7 +55,7 @@ main{
             border: 3px solid $dark;
             border-radius: 20px;
             color: white;
-            &:hover{
+            &:hover {
                 color: $dark;
                 border: 3px solid $dark;
                 background: white;
