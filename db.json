@@ -1,0 +1,39 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Rimantas",
+      "email": "rimantas@gmail.com",
+      "phone": "+370648319312",
+      "message": "Pirmoji zinute."
+    },
+    {
+      "id": "2",
+      "name": "Aldona",
+      "email": "aldona@gmail.com",
+      "phone": "+370648319312",
+      "message": "Antroji zinute."
+    },
+    {
+      "id": "3",
+      "name": "Petras",
+      "email": "petrauskas@gmail.com",
+      "phone": "+3704123122",
+      "message": "Trecioji zinute."
+    },
+    {
+      "id": "6ec5",
+      "name": "ASd",
+      "email": "dasdasd@gmail.com",
+      "phoneNumber": "dasdsada",
+      "message": "dsadasdas"
+    },
+    {
+      "id": "4ea7",
+      "name": "dsadas",
+      "email": "noobtuberis1990@gmail.com",
+      "phoneNumber": "867220549",
+      "message": "dasdsadsa"
+    }
+  ]
+}

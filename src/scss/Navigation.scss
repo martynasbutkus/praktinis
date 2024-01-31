@@ -1,0 +1,124 @@
+$light: #ecf0ba;
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 40%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
+  
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: #55344c69;
+    }
+    
+    .pavadinimas {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 20px;
+        top: -50px;
+        color: #ecf0ba;
+        border-bottom: 2px solid $light;
+        border-top: 2px solid $light;
+
+        @media screen and (max-width: 768px) {
+            top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    div {
+        position: relative;
+        display: flex;
+        gap: 20px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            position: relative;
+            padding: 1em 1.5em;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 1em 0.8em;
+
+            &.effect {
+                color: $light;
+
+                &::after,
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 20%;
+                    height: 20%;
+                    border: 2px solid;
+                    transition: all 0.6s ease;
+                    border-radius: 2px;
+                }
+
+                &::after {
+                    bottom: 0;
+                    right: 0;
+                    border-top-color: transparent;
+                    border-left-color: transparent;
+                    border-bottom-color: $light;
+                    border-right-color: $light;
+                }
+
+                &::before {
+                    top: 0;
+                    left: 0;
+                    border-bottom-color: transparent;
+                    border-right-color: transparent;
+                    border-top-color: $light;
+                    border-left-color: $light;
+                }
+
+                &:hover::after,
+                &:hover::before {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                margin: 0.5em 0;
+            }
+        }
+    }
+}
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .link-animation {
+    opacity: 0; 
+    animation: fadeIn 1.2s ease-out forwards;
+}
