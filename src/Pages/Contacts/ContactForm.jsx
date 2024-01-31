@@ -14,10 +14,21 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+
+    const numberPattern = /^[0-9\b]+$/;
+    const letterPattern = /^[A-Za-z\s]+$/;
+  
+    if (name === 'phoneNumber' && (value === '' || numberPattern.test(value))) {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    } else if (name === 'name' && (value === '' || letterPattern.test(value))) {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -62,6 +73,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
+            placeholder='Vardas'
             />
         </label>
         <label>
@@ -72,17 +84,21 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
+            placeholder='mano@gmail.com'
             />
         </label>
         <label>
-            Telefonas
+          Telefonas
+          <div>
             <input
-            type="tel"
-            name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            required
+              type="tel"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              required
+              placeholder="tel.nr"
             />
+          </div>
         </label>
         <label>
             Žinutė
@@ -91,6 +107,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             required
+            placeholder='Rašyti čia'
             />
         </label>
         <button type="submit">Pateikti</button>
