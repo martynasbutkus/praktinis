@@ -108,7 +108,6 @@ main{
             }
             h1{
                 font-size: 25px;
-                padding: 0px;
             }
         }
     }
@@ -133,10 +132,6 @@ main{
                 margin: auto;
                 width: 30%;
             }
-            h1{
-                font-size: 25px;
-                padding: 0px;
-            }
         }
     }
     @media screen and (max-width: 377px) {
@@ -159,10 +154,6 @@ main{
             button{
                 margin: auto;
                 width: 30%;
-            }
-            h1{
-                font-size: 25px;
-                padding: 0px;
             }
         }
     }
@@ -309,8 +300,8 @@ main{
     margin-bottom: 10px;
     border-bottom: 10px solid #55344cc4;
     img{
-        width: 200px;
-        height: 200px;
+        height: 250px;
+        object-fit: cover;
         box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
     }
 }

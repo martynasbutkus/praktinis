@@ -93,7 +93,7 @@ const ContactForm = () => {
             required
             />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Pateikti</button>
     </form>
         {showPopup && (
           <div className="popup">
