@@ -7,21 +7,20 @@ const ImageSlideshow = () => {
   const modalRef = useRef(null);
 
   const images = [
-    '../src/gallery/1.jpg',
-    '../src/gallery/2.jpg',
-    '../src/gallery/3.jpg',
-    '../src/gallery/1.jpg',
-    '../src/gallery/2.jpg',
-    '../src/gallery/3.jpg',
-    '../src/gallery/1.jpg',
-    '../src/gallery/2.jpg',
-    '../src/gallery/3.jpg',
-    '../src/gallery/1.jpg',
-    '../src/gallery/2.jpg',
-    '../src/gallery/3.jpg',
-    '../src/gallery/1.jpg',
-    '../src/gallery/2.jpg',
-    '../src/gallery/3.jpg',
+    '/gallery/1.jpg',
+    '/gallery/2.jpg',
+    '/gallery/3.jpg',
+    '/gallery/1.jpg',
+    '/gallery/2.jpg',
+    '/gallery/3.jpg',
+    '/gallery/1.jpg',
+    '/gallery/2.jpg',
+    '/gallery/3.jpg',
+    '/gallery/1.jpg',
+    '/gallery/2.jpg',
+    '/gallery/3.jpg',
+    '/gallery/1.jpg',
+    '/gallery/2.jpg'
   ];
 
   const openModal = (index) => {
