@@ -1,3 +1,5 @@
+@import 'variables';
+
 .services {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@
       margin: 0;
       font-size: 3vw;
       font-weight: 700;
-      color: #55344C;
+      color: $dark;
 
       @media screen and (max-width: 768px) {
           font-size: 7vw;
@@ -55,7 +57,7 @@
 
 .icon1 {
   font-size: 8vw;
-  color: #DED0B6;
+  color: $cream;
 
   @media screen and (max-width: 768px) {
       font-size: 15vw;
@@ -65,7 +67,7 @@
 h3 {
   font-size: 1.5vw;
   margin-top: 10px;
-  color: #55344C;
+  color: $dark;
 
   @media screen and (max-width: 768px) {
       font-size: 3vw;

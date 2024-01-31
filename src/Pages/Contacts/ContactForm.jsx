@@ -1,48 +1,55 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phoneNumber: '',
-        message: '',
+  const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phoneNumber: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('http://localhost:3001/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    
-      const handleChange = (e) => {
-        const { name, value } = e.target;
+
+      if (response.ok) {
         setFormData({
-          ...formData,
-          [name]: value,
+          name: '',
+          email: '',
+          phoneNumber: '',
+          message: '',
         });
-      };
-    
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-    
-        try {
-          const response = await fetch('http://localhost:3001/contacts', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-          });
-    
-          if (response.ok) {
-            console.log('Form submitted successfully!');
-            setFormData({
-              name: '',
-              email: '',
-              phoneNumber: '',
-              message: '',
-            });
-          } else {
-            console.error('Failed to submit form.');
-          }
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      };
+        setShowPopup(true);
+        setTimeout(() => {
+          navigate('/');
+        }, 3000);
+      } else {
+        console.error('Failed to submit form.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
   return (
     <>
@@ -88,6 +95,11 @@ const ContactForm = () => {
         </label>
         <button type="submit">Submit</button>
     </form>
+        {showPopup && (
+          <div className="popup">
+            <p>Su jumis susisieksim!</p>
+          </div>
+      )}
     </>
   );
 };

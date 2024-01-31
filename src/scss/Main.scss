@@ -1,5 +1,4 @@
-$main: #55344c;
-$secondary: #ecf0ba;
+@import 'variables';
 
 main{
     display: flex;
@@ -36,7 +35,7 @@ main{
     .text{
         width: 50%;
         margin: auto;
-        color: $main;
+        color: $dark;
         h1{
             font-size: 34px;
             padding-bottom: 40px;
@@ -50,13 +49,13 @@ main{
             border: none;
             padding: 5px;
             font-size: 1.5vw;
-            background: $main;
-            border: 3px solid $main;
+            background: $dark;
+            border: 3px solid $dark;
             border-radius: 20px;
             color: white;
             &:hover{
-                color: $main;
-                border: 3px solid $main;
+                color: $dark;
+                border: 3px solid $dark;
                 background: white;
                 cursor: pointer;
             }
@@ -113,7 +112,7 @@ main{
             max-width: 270px;
             min-width: 100px;
             h3{
-                color: $main;
+                color: $dark;
                 font-size: clamp(12px, 1.1vw, 1.7vw);
                 padding: 10px;
             }
@@ -123,21 +122,21 @@ main{
                 min-width: 20px;
                 max-width: 120px;
                 padding: 5px;
-                background: #DED0B6;
-                border: 3px solid #DED0B6;
+                background: $cream;
+                border: 3px solid $cream;
                 border-radius: 20px;
                 color: white;
                 font-size: 1vw;
                 &:hover{
-                    color: #DED0B6;
-                    border: 3px solid #DED0B6;
+                    color: $cream;
+                    border: 3px solid $cream;
                     background: white;
                     cursor: pointer;
                 }
             }
 
             .icon{
-                color: #DED0B6;
+                color: $cream;
                 font-size: 7vw;
             }
         }

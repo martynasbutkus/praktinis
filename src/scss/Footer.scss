@@ -1,13 +1,14 @@
-$light: #ecf0ba;
+@import 'variables';
 
 .footer {
     position: relative;
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #55344c;
+    background-color: $dark;
     text-align: center;
     padding: 10px;
+    margin-top: auto;
 
     .button {
         position: relative;

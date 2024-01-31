@@ -1,3 +1,5 @@
+@import 'variables';
+
 .contact {
     display: flex;
     flex-wrap: wrap;
@@ -18,23 +20,23 @@
         max-width: 600px;
         min-width: 300px;
         width: 60%;
-        background: #55344C;
+        background: $dark;
         padding: 20px;
         box-shadow: 0 1px 1px rgba(0,0,0,0.15), 0 2px 2px rgba(0,0,0,0.15), 0 4px 4px rgba(0,0,0,0.15), 0 8px 8px rgba(0,0,0,0.15);
         h4{
-            color: #DED0B6;
+            color: $cream;
         }
         .contact-style{
             display: inline-block;
-            color: #DED0B6;
-            border-bottom: 2px solid #DED0B6;
+            color: $cream;
+            border-bottom: 2px solid $cream;
             margin-bottom: 20px;
         }
         form {
           display: flex;
           flex-wrap: wrap;
           gap: 20px;
-          color: #DED0B6;
+          color: $cream;
           margin-top: 20px;
   
           label {
@@ -46,14 +48,14 @@
                 padding-bottom: 3px;
                 padding-left: 3px;
                 outline: none;
-                border: 1px solid #55344C;
+                border: 1px solid $dark;
             }
             input{
                 padding-top: 3px;
                 padding-bottom: 3px;
                 padding-left: 3px;
                 outline: none;
-                border: 1px solid #55344C;
+                border: 1px solid $dark;
             }
             &:nth-child(1),
             &:nth-child(2),
@@ -70,21 +72,42 @@
           }
   
           button {
-            background: #DED0B6;
-            border: 2px solid #DED0B6;
+            background: $cream;
+            border: 2px solid $cream;
             padding: 5px;
             font-size: clamp(14px, 1vw, 20px);
             border-radius: 10px;
             margin: auto;
             width: 30%;
             &:hover{
-                background: #55344C;
-                border: 2px solid #DED0B6;
-                color: #DED0B6;;
+                background: $dark;
+                border: 2px solid $cream;
+                color: $cream;
             }
           }
         }
       }
     }
   }
+
+.popup{
+  position: relative;
+  display: flex;
+  margin: auto;
+  top: -180px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 100px;
+  width: 250px;
+  background-color: $cream;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  p{
+    padding: 10px;
+    font-weight: 700;
+    border-top: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+  }
+}
   

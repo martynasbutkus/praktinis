@@ -1,4 +1,4 @@
-$light: #ecf0ba;
+@import 'variables';
 
 header {
     position: relative;
@@ -29,7 +29,7 @@ header {
         position: relative;
         padding: 20px;
         top: -50px;
-        color: #ecf0ba;
+        color: $light;
         border-bottom: 2px solid $light;
         border-top: 2px solid $light;
 
