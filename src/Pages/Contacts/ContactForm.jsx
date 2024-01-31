@@ -110,7 +110,7 @@ const ContactForm = () => {
             placeholder='Rašyti čia'
             />
         </label>
-        <button type="submit">Pateikti</button>
+        <button type="submit">Siųsti</button>
     </form>
         {showPopup && (
           <div className="popup">
