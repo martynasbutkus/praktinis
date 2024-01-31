@@ -45,11 +45,13 @@ main{
         p {
             width: 70%;
             font-size: 20px;
-            padding-bottom: 50px;
+            padding-bottom: 20px;
         }
         button {
             border: none;
             padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
             font-size: 1.5vw;
             background: $dark;
             border: 3px solid $dark;
