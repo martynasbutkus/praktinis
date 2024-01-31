@@ -67,6 +67,9 @@
         font-size: 1.4vw;
 
         @media screen and (max-width: 768px) {
+            h3{
+                margin-bottom: 10px;
+            }
             font-size: 2vw;
         }
     }
