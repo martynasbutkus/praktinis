@@ -14,22 +14,14 @@ const ContactForm = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    const numberPattern = /^[0-9\b]+$/;
-    const letterPattern = /^[A-Za-z\s]+$/;
   
-    if (name === 'phoneNumber' && (value === '' || numberPattern.test(value))) {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    } else if (name === 'name' && (value === '' || letterPattern.test(value))) {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
+  
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
