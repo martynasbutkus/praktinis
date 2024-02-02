@@ -25,34 +25,28 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('http://localhost:3001/contacts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+  
+    const response = await fetch('http://localhost:3001/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    if (response.ok) {
+      setFormData({
+        name: '',
+        email: '',
+        phoneNumber: '',
+        message: '',
       });
-
-      if (response.ok) {
-        setFormData({
-          name: '',
-          email: '',
-          phoneNumber: '',
-          message: '',
-        });
-        setShowPopup(true);
-        setTimeout(() => {
-          navigate('/');
-        }, 3000);
-      } else {
-        console.error('Failed to submit form.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
+      setShowPopup(true);
+      setTimeout(() => {
+        navigate('/');
+      }, 3000);
     }
-  };
+  };  
 
   return (
     <>
