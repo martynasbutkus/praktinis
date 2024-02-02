@@ -21,8 +21,6 @@ const ContactForm = () => {
     });
   };
   
-  
-
   const handleSubmit = async (e) => {
     e.preventDefault();
   
