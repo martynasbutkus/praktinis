@@ -14,10 +14,6 @@ const Services = () => {
             Paslaugos
         </div>
         <div className='listing'>
-            <div className="block link-animation">
-              <MdOutlineElderlyWoman className='icon1'/>
-              <h3>Ilgalaikė ir trumpalaikė senyvo amžiaus ir asmenų su negalia socialinė globa</h3>  
-            </div>
 
             <div className="block link-animation">
               <FaSprayCanSparkles className='icon1'/>
@@ -35,13 +31,18 @@ const Services = () => {
             </div>
 
             <div className="block link-animation">
+              <MdOutlineElderlyWoman className='icon1'/>
+              <h3>Ilgalaikė ir trumpalaikė senyvo amžiaus ir asmenų su negalia socialinė globa</h3>  
+            </div>
+
+            <div className="block link-animation">
               <MdMedicalServices className='icon1'/>
               <h3>Asmens sveikatos priežiūra ir slauga</h3>
             </div>    
 
             <div className="block link-animation">
               <MdOutlineEmojiTransportation className='icon1'/>
-              <h3>Ligonių ir neįgaliųjų pervežimo paslaugos spec. transportu Lietuvoje ir Europos sąjungoje</h3>
+              <h3>Pacientų pervežimo paslaugos spec. transportu Lietuvoje ir Europos sąjungoje</h3>
             </div>
         </div>
     </div>
