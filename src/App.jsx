@@ -9,6 +9,7 @@ import Main from './Pages/Main/Main';
 import Services from './Pages/Services/Services';
 import Contacts from './Pages/Contacts/Contacts';
 import NotFound from './Pages/NotFound/NotFound';
+import Submition from './Pages/Submition/Submition';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/paslaugos" element={<Services />} />
           <Route path="/" element={<Main />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/susisiekimas" element={<Submition/>} />
         </Routes>
         <Footer />
       </>

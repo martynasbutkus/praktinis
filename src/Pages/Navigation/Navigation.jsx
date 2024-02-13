@@ -15,7 +15,7 @@ const Navigation = () => {
   return (
     <header>
       <div className='pavadinimas link-animation'>
-        <h1>VŠĮ AKACIJŲ ŽIEDAI</h1>
+        <h1>Jūsų pavadinimas</h1>
         <h2>Socialinės globos namai</h2>
       </div>
       <div>

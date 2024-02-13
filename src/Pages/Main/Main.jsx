@@ -25,8 +25,8 @@ const Main = () => {
     <main>
         <div className='img animation'></div>
         <div className='text animation2'>
-            <h1>VŠĮ AKACIJŲ ŽIEDAI</h1>
-            <p>Akacijų žiedai – socialinės globos namai Kaišiadorių rajone. Teikiame ilgalaikes ir trumpalaikes senyvo amžiaus ir asmenų su negalia socialinės globos paslaugas.</p>
+            <h1>Jūsų pavadinimas</h1>
+            <p>Jūsų pavadinimas – socialinės globos namai Kaišiadorių rajone. Teikiame ilgalaikes ir trumpalaikes senyvo amžiaus ir asmenų su negalia socialinės globos paslaugas.</p>
             <button onClick={handleServicesClick}>Paslaugos</button>
         </div>
     </main>
